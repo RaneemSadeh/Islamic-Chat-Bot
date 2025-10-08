@@ -5,7 +5,6 @@
 ![Islamic Chatbot](https://img.shields.io/badge/Islamic-Chatbot-green?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjwvc3ZnPg==)
 ![RAG Architecture](https://img.shields.io/badge/RAG-Powered-blue?style=for-the-badge)
 ![Arabic NLP](https://img.shields.io/badge/Arabic-NLP-orange?style=for-the-badge)
-![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
 **An intelligent Islamic knowledge assistant powered by Retrieval-Augmented Generation (RAG)**
@@ -24,15 +23,15 @@
 
 ### 🎯 What Makes This Special?
 
-- **📚 Authentic Sources**: All answers derived from verified Islamic references
-- **🔍 Full Traceability**: Every response includes original text, source name, and page numbers
-- **🤖 RAG Architecture**: Combines retrieval and generation for accurate, grounded responses
-- **📝 Arabic-First**: Native Arabic language processing and understanding
-- **🎨 Modern UI/UX**: Beautiful, responsive React interface designed for seamless interaction
+- ** Authentic Sources**: All answers derived from verified Islamic references
+- ** Full Traceability**: Every response includes original text, source name, and page numbers
+- ** RAG Architecture**: Combines retrieval and generation for accurate, grounded responses
+- ** Arabic-First**: Native Arabic language processing and understanding
+- ** Modern UI/UX**: Beautiful, responsive React interface designed for seamless interaction
 
 ---
 
-## 🌟 Features
+##  Features
 
 ### Core Capabilities
 
@@ -61,7 +60,7 @@
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -87,29 +86,29 @@
                          ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                   Knowledge Base Sources                     │
-│  📖 Quran  |  📚 Hadith  |  📜 IslamWeb  |  ✍️ Manuscripts  │
+│   Quran  |   Hadith  |   IslamWeb  |   Manuscripts  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ### Technology Stack
 
 **Frontend**
-- ⚛️ React 18+ with TypeScript
-- 🎨 Modern CSS/Tailwind for styling
-- 🔄 Real-time state management
-- 🌐 Arabic RTL support
+-  React with TypeScript
+-  Modern CSS/Tailwind for styling
+-  Real-time state management
+-  Arabic RTL support
 
 **Backend (RAG Pipeline)**
-- 🧠 Gemini API for LLM generation
-- 🔍 Vector database for semantic search
-- 📊 Arabic embedding models (ARABERT/mBERT)
-- 🛠️ LangChain/LlamaIndex framework
+-  Gemini API for LLM generation
+-  Vector database for semantic search
+-  Arabic embedding models (ARABERT/mBERT)
+-  LangChain/LlamaIndex framework
 
 **Data Processing**
-- 🖼️ High-resolution OCR for handwritten Arabic
-- 📝 Text chunking with overlap
-- 🏷️ Metadata preservation system
-- 🔄 Continuous knowledge base updates
+-  High-resolution OCR for handwritten Arabic
+-  Text chunking with overlap
+-  Metadata preservation system
+-  Continuous knowledge base updates
 
 ---
 
@@ -153,7 +152,7 @@ Navigate to http://localhost:3000
 
 ---
 
-## 💡 Usage
+##  Usage
 
 ### Basic Query
 
@@ -223,63 +222,12 @@ export const VECTOR_DB_CONFIG = {
 
 ---
 
-## 🎯 Roadmap
-
-- [x] Core RAG architecture implementation
-- [x] React frontend with chat interface
-- [x] Gemini API integration
-- [x] Arabic text processing pipeline
-- [ ] Advanced OCR for handwritten manuscripts
-- [ ] Multi-madhab support
-- [ ] Voice input/output (Arabic)
-- [ ] Mobile app (React Native)
-- [ ] Advanced filtering and search
-- [ ] User authentication and history
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/AmazingFeature`)
-3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push to the branch** (`git push origin feature/AmazingFeature`)
-5. **Open a Pull Request**
-
-### Development Guidelines
-
-- Follow TypeScript best practices
-- Write clean, documented code
-- Test thoroughly before submitting
-- Respect Islamic scholarly standards
-- Maintain source authenticity
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 🙏 Acknowledgments
 
 - Islamic scholars and researchers for source verification
 - Arabic NLP community for language models
 - Open-source contributors to RAG frameworks
 - The IslamWeb platform for digital resources
-
----
-
-## 📧 Contact
-
-**Project Maintainer**: Your Name
-
-- 📧 Email: your.email@example.com
-- 💼 LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- 🐦 Twitter: [@yourhandle](https://twitter.com/yourhandle)
 
 ---
 
