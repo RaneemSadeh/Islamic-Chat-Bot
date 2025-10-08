@@ -1,4 +1,4 @@
-# 🕌 Islamic RAG Chatbot - الشيخ البوت
+# 🕌 Islamic RAG Chatbot - شيخ بوت
 
 <div align="center">
 
