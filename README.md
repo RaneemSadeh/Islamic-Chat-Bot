@@ -23,11 +23,11 @@
 
 ### 🎯 What Makes This Special?
 
-- ** Authentic Sources**: All answers derived from verified Islamic references
-- ** Full Traceability**: Every response includes original text, source name, and page numbers
-- ** RAG Architecture**: Combines retrieval and generation for accurate, grounded responses
-- ** Arabic-First**: Native Arabic language processing and understanding
-- ** Modern UI/UX**: Beautiful, responsive React interface designed for seamless interaction
+-  Authentic Sources: All answers derived from verified Islamic references
+-  Full Traceability: Every response includes original text, source name, and page numbers
+-  RAG Architecture: Combines retrieval and generation for accurate, grounded responses
+-  Arabic-First: Native Arabic language processing and understanding
+-  Modern UI/UX: Beautiful, responsive React interface designed for seamless interaction
 
 ---
 
