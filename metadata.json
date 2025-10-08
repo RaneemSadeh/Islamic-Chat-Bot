@@ -1,0 +1,5 @@
+{
+  "name": "Islamic RAG Chatbot",
+  "description": "A sophisticated chatbot designed to answer questions on Islamic topics. It uses a simulated Retrieval Augmented Generation (RAG) system to provide accurate, source-based answers from a virtual knowledge base including IslamWeb and other key texts.",
+  "requestFramePermissions": []
+}
