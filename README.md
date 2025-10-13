@@ -15,9 +15,7 @@
 
 </div>
 
----
 
-## 📖 About
 
 **Islamic RAG Chatbot** is an advanced AI-powered assistant that provides authentic, source-verified answers to Islamic questions in Arabic. Unlike traditional chatbots that rely solely on pre-trained knowledge, our system retrieves information from verified Islamic sources and generates contextualized responses with proper citations.
 
@@ -230,12 +228,15 @@ export const VECTOR_DB_CONFIG = {
 - The IslamWeb platform for digital resources
 
 ---
-
 <div align="center">
+
+![How the app works](./how%20does%20the%20app%20work.gif)
 
 **⭐ Star this repository if you find it helpful!**
 
 Made with ❤️ for the Islamic community
+
 Raneem Sadeh
 
+</div>
 </div>
