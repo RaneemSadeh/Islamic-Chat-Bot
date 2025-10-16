@@ -1,5 +1,6 @@
-# 🕌 Islamic RAG Chatbot - شيخ بوت
-
+<div align="center">
+  <img width="100%" alt="image" src="https://github.com/user-attachments/assets/d5467b34-8ff3-4346-8d03-365b18f1a259" />
+</div>
 <div align="center">
 
 ![Islamic Chatbot](https://img.shields.io/badge/Islamic-Chatbot-green?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjwvc3ZnPg==)
@@ -204,14 +205,11 @@ export const VECTOR_DB_CONFIG = {
 
 ---
 <div align="center">
-
-![How the app works](./how%20does%20the%20app%20work.gif)
-
-**⭐ Star this repository if you find it helpful!**
-
-Made with ❤️ for the Islamic community
-
-Raneem Sadeh
-
-</div>
+  <img width="60%" alt="Siraj Islamic Chatbot" src="https://github.com/RaneemSadeh/Islamic-Chat-Bot/blob/main/%D8%B3%D8%B1%D8%A7%D8%AC_%D8%B4%D8%A7%D8%AA%20%D8%A8%D9%88%D8%AA%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A.gif" />
+  <br/><br/>
+  <strong>⭐ Star this repository if you find it helpful!</strong>
+  <br/><br/>
+  Made with ❤️ for the Islamic community
+  <br/>
+  Raneem Sadeh
 </div>
