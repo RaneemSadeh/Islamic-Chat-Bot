@@ -20,7 +20,7 @@
 
 **Islamic RAG Chatbot** is an advanced AI-powered assistant that provides authentic, source-verified answers to Islamic questions in Arabic. Unlike traditional chatbots that rely solely on pre-trained knowledge, our system retrieves information from verified Islamic sources and generates contextualized responses with proper citations.
 
-### 🎯 What Makes This Special?
+###  What Makes This Special?
 
 -  Authentic Sources: All answers derived from verified Islamic references
 -  Full Traceability: Every response includes original text, source name, and page numbers
@@ -86,7 +86,7 @@
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -156,7 +156,7 @@ const response = await generateResponse(userQuery, retrievedChunks);
 
 ---
 
-## 🔧 Configuration
+##  Configuration
 
 ### Embedding Models
 
@@ -184,7 +184,7 @@ export const VECTOR_DB_CONFIG = {
 
 ---
 
-## 📊 Data Sources
+##  Data Sources
 
 | Source | Type | Status | Records |
 |--------|------|--------|---------|
@@ -196,7 +196,7 @@ export const VECTOR_DB_CONFIG = {
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Islamic scholars and researchers for source verification
 - Arabic NLP community for language models
