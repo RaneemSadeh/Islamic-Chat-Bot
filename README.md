@@ -146,14 +146,6 @@ User: "ما حكم الصلاة في أول الوقت؟"
 }
 ```
 
-### API Integration
-
-```typescript
-import { generateResponse } from './services/geminiService';
-
-const response = await generateResponse(userQuery, retrievedChunks);
-```
-
 ---
 
 ##  Configuration
