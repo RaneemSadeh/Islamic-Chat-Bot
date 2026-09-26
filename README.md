@@ -1,207 +1,188 @@
 <div align="center">
-  <img width="100%" alt="image" src="https://github.com/user-attachments/assets/d5467b34-8ff3-4346-8d03-365b18f1a259" />
+
+# سِراج · Siraj
+
+**An Arabic Islamic knowledge assistant that shows its working.**
+
+Every answer arrives in three parts: the passage it rests on, the source that passage came from, and a plain-language explanation aimed at the question that was actually asked.
+
+[![CI](https://github.com/RaneemSadeh/Islamic-Chat-Bot/actions/workflows/ci.yml/badge.svg)](https://github.com/RaneemSadeh/Islamic-Chat-Bot/actions/workflows/ci.yml)
+![React 19](https://img.shields.io/badge/React-19-087EA4?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-FAISS-0E8F6E)
+![License](https://img.shields.io/badge/License-MIT-1F2937)
+
+<img src="docs/assets/siraj-preview.gif" width="70%" alt="Siraj chat interface" />
+
 </div>
+
+---
+
+## What this is
+
+Most Islamic chatbots answer fluently and cite nothing. Siraj is built around
+the opposite constraint: **an answer that cannot show its source is a bug.**
+
+The repository holds two programs that take that constraint seriously in two
+different ways.
+
+| | [`src/`](src/) — **web client** | [`rag_console/`](rag_console/) — **RAG console** |
+|---|---|---|
+| **What it does** | An Arabic, right-to-left chat interface where every reply is forced into a four-field contract: answer, passage, source, note | Real retrieval-augmented answering over PDFs you upload |
+| **Stack** | React 19, TypeScript, Vite, Gemini 2.5 Flash | Streamlit, LangChain, FAISS, Nomic embeddings, Groq |
+| **Grounding** | ⚠️ Model-asserted. Nothing is retrieved — citations are leads to verify | ✅ Retrieved. Answers are built from passages pulled out of your index |
+| **Use it for** | The interface, the answer contract, the Arabic experience | Retrieval quality, chunking, citation accuracy |
+
+That difference is stated plainly rather than papered over — it is the most
+important thing to understand before trusting either output. The path from one
+to the other is written up in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
+---
+
+## System at a glance
+
 <div align="center">
-
-![Islamic Chatbot](https://img.shields.io/badge/Islamic-Chatbot-green?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bTAgMThjLTQuNDEgMC04LTMuNTktOC04czMuNTktOCA4LTggOCAzLjU5IDggOC0zLjU5IDgtOCA4eiIvPjwvc3ZnPg==)
-![RAG Architecture](https://img.shields.io/badge/RAG-Powered-blue?style=for-the-badge)
-![Arabic NLP](https://img.shields.io/badge/Arabic-NLP-orange?style=for-the-badge)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-
-**An intelligent Islamic knowledge assistant powered by Retrieval-Augmented Generation (RAG)**
-
-*Bridging centuries of Islamic scholarship with cutting-edge AI technology*
-
-[Features](#-features) • [Architecture](#-architecture) • [Demo](#-demo) • [Installation](#-installation) • [Usage](#-usage) • [Contributing](#-contributing)
-
+  <img src="docs/diagrams/01-system-architecture.svg" width="100%" alt="System architecture" />
 </div>
 
-
-
-**Islamic RAG Chatbot** is an advanced AI-powered assistant that provides authentic, source-verified answers to Islamic questions in Arabic. Unlike traditional chatbots that rely solely on pre-trained knowledge, our system retrieves information from verified Islamic sources and generates contextualized responses with proper citations.
-
-###  What Makes This Special?
-
--  Authentic Sources: All answers derived from verified Islamic references
--  Full Traceability: Every response includes original text, source name, and page numbers
--  RAG Architecture: Combines retrieval and generation for accurate, grounded responses
--  Arabic-First: Native Arabic language processing and understanding
--  Modern UI/UX: Beautiful, responsive React interface designed for seamless interaction
+More figures — indexing, query flow, the answer contract, the request sequence,
+the component tree — are in [`docs/diagrams/`](docs/diagrams/) and walked
+through in the architecture document. They are generated from
+[`generate_diagrams.py`](docs/diagrams/generate_diagrams.py), not drawn by hand.
 
 ---
 
-##  Features
+## Quick start
 
-### Core Capabilities
-
-✅ **Source-Verified Responses**
-- Original text extraction from authentic Islamic sources
-- Complete citation with reference name and page/URL
-- Contextualized explanation tailored to user's question
-
-✅ **Comprehensive Knowledge Base**
-- القرآن الكريم (The Holy Quran)
-- صحيح البخاري (Sahih al-Bukhari)
-- صحيح مسلم (Sahih Muslim)
-- إسلام ويب (IslamWeb)
-- كتب ابن تيمية (Books of Ibn Taymiyyah)
-
-✅ **Advanced NLP Processing**
-- Arabic handwritten text recognition (OCR)
-- Semantic search using Arabic embeddings (ARABERT/mBERT)
-- Context-aware response generation
-
-✅ **Professional Frontend**
-- Real-time chat interface
-- Source highlighting and citation display
-- Responsive design for all devices
-- Arabic RTL support
-
----
-
-##  Architecture
-
-<img width="1819" height="4038" alt="Islamic Chat Bot" src="https://github.com/user-attachments/assets/df05d937-d455-4daa-a34e-23615f55c0eb" />
-
-
-### Technology Stack
-
-**Frontend**
--  React with TypeScript
--  Modern CSS/Tailwind for styling
--  Real-time state management
--  Arabic RTL support
-
-**Backend (RAG Pipeline)**
--  Gemini API for LLM generation
--  Vector database for semantic search
--  Arabic embedding models (ARABERT/mBERT)
--  LangChain/LlamaIndex framework
-
-**Data Processing**
--  High-resolution OCR for handwritten Arabic
--  Text chunking with overlap
--  Metadata preservation system
--  Continuous knowledge base updates
-
----
-
-##  Getting Started
-
-### Prerequisites
+### The web client
 
 ```bash
-node >= 18.0.0
-npm >= 9.0.0
-```
-
-### Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/islamic-rag-chatbot.git
-cd islamic-rag-chatbot
-```
-
-2. **Install dependencies**
-```bash
+git clone https://github.com/RaneemSadeh/Islamic-Chat-Bot.git
+cd Islamic-Chat-Bot
 npm install
+
+cp .env.example .env.local        # then paste your key into VITE_GEMINI_API_KEY
+npm run dev                       # http://localhost:3000
 ```
 
-3. **Set up environment variables**
+Get a key from [Google AI Studio](https://aistudio.google.com/app/apikey). With
+no key the app still runs — it opens with a clear notice instead of failing at
+the first question.
+
+> **Note on the key.** Vite compiles it into the browser bundle, so it is
+> readable by anyone who opens dev tools. Restrict it by HTTP referrer, and put
+> it behind a server before deploying anything public.
+
+### The RAG console
+
 ```bash
-cp .env.example .env
-# Add your Gemini API key and other configurations
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r rag_console/requirements.txt
+streamlit run rag_console/app.py
 ```
 
-4. **Run the development server**
-```bash
-npm run dev
-```
-
-5. **Open your browser**
-```
-Navigate to http://localhost:3000
-```
+Then, in the sidebar: paste a [Groq](https://console.groq.com/keys) key and a
+[Nomic](https://atlas.nomic.ai/) key, upload a PDF, set chunk size and overlap,
+and press **بناء الفهرس** (Build index). Ask a question and the passages behind
+the answer appear underneath it.
 
 ---
 
-##  Usage
+## How an answer is built
 
-### Basic Query
+<div align="center">
+  <img src="docs/diagrams/04-answer-contract.svg" width="100%" alt="The four-field answer contract" />
+</div>
 
-```typescript
-// Example: Ask a question in Arabic
-User: "ما حكم الصلاة في أول الوقت؟"
+The web client asks Gemini for a strict JSON object and refuses anything else:
 
-// Response structure:
+```ts
 {
-  originalText: "النص الأصلي من المصدر...",
-  source: {
-    name: "صحيح البخاري",
-    page: "١٢٣",
-    type: "حديث"
-  },
-  explanation: "شرح مفصل ومعاد صياغته..."
+  rephrasedAnswer: string;   // the explanation, in clear Arabic
+  originalText:    string;   // the passage, quoted rather than paraphrased
+  source: { name: string; reference: string };
+  aiNote:          string;   // how the answer was produced, and its limits
 }
 ```
 
+A missing field or malformed JSON raises a typed error and renders as a failed
+turn. A card with a blank source line would read as a citation while carrying
+none — so it is never shown.
+
 ---
 
-##  Configuration
+## Repository layout
 
-### Embedding Models
-
-Configure Arabic embedding models in `config/embeddings.ts`:
-
-```typescript
-export const EMBEDDING_CONFIG = {
-  model: 'arabert-base-v2',
-  dimension: 768,
-  similarity: 'cosine'
-};
+```
+.
+├── src/                          # React client
+│   ├── components/               # Header, ChatInput, Message, EmptyState, Feedback
+│   ├── hooks/useChat.ts          # one conversation: turns, cancellation, failures
+│   ├── lib/errors.ts             # typed failures mapped to Arabic copy
+│   ├── services/geminiService.ts # the only module that knows a provider exists
+│   ├── config.ts                 # environment in one place
+│   └── types.ts                  # ChatMessage, Source, GeminiResponse
+│
+├── rag_console/
+│   ├── app.py                    # Streamlit + LangChain retrieval console
+│   └── requirements.txt
+│
+├── docs/
+│   ├── ARCHITECTURE.md           # the long version, with every diagram
+│   ├── diagrams/                 # generated SVGs + the generator
+│   └── assets/                   # screen recordings
+│
+└── .github/workflows/ci.yml      # typecheck, build, diagram drift, py compile
 ```
 
-### Vector Database
+---
 
-Set up your vector database connection:
+## Scripts
 
-```typescript
-export const VECTOR_DB_CONFIG = {
-  type: 'chromadb', // or 'faiss', 'pinecone'
-  host: 'localhost',
-  port: 8000
-};
-```
+| Command | What it does |
+|---|---|
+| `npm run dev` | Vite dev server on port 3000 |
+| `npm run build` | Typecheck, then build to `dist/` |
+| `npm run typecheck` | TypeScript in strict mode, no emit |
+| `npm run diagrams` | Regenerate every SVG in `docs/diagrams/` |
+| `streamlit run rag_console/app.py` | Launch the retrieval console |
 
 ---
 
-##  Data Sources
+## Limits worth knowing
 
-| Source | Type | Status | Records |
-|--------|------|--------|---------|
-| القرآن الكريم | Digital | ✅ Active | 6,236 verses |
-| صحيح البخاري | Digital | ✅ Active | 7,563 hadiths |
-| صحيح مسلم | Digital | ✅ Active | 7,190 hadiths |
-| إسلام ويب | Web Scraping | ✅ Active | ~50,000 articles |
-| كتب ابن تيمية | Manuscripts | 🔄 Processing | In progress |
+- **The web client does not retrieve.** Its citations are produced by the model.
+  Verify them.
+- **The console's index is not persistent.** It lives in session state; a refresh
+  clears it and the PDF must be re-indexed.
+- **Scanned manuscripts need OCR.** `PyPDFLoader` reads a text layer; a page of
+  images yields nothing to chunk.
+- **Nothing here is a fatwa.** The interface says so on every screen. Questions
+  that carry real consequence belong with a qualified scholar, not a language
+  model.
+
+---
+
+## Contributing
+
+Issues and pull requests are welcome — see
+[`CONTRIBUTING.md`](CONTRIBUTING.md). The most valuable contributions right now
+are a labelled Arabic retrieval evaluation set, an Arabic-first embedding
+comparison, and an OCR ingestion path for manuscripts.
 
 ---
 
-##  Acknowledgments
+## Acknowledgements
 
-- Islamic scholars and researchers for source verification
-- Arabic NLP community for language models
-- Open-source contributors to RAG frameworks
-- The IslamWeb platform for digital resources
+Built on the work of the Arabic NLP community, the open-source RAG ecosystem,
+and the scholars whose texts make the corpus worth searching at all.
 
----
 <div align="center">
-  <img width="60%" alt="Siraj Islamic Chatbot" src="https://github.com/RaneemSadeh/Islamic-Chat-Bot/blob/main/%D8%B3%D8%B1%D8%A7%D8%AC_%D8%B4%D8%A7%D8%AA%20%D8%A8%D9%88%D8%AA%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%D9%8A.gif" />
-  <br/><br/>
-  <strong>⭐ Star this repository if you find it helpful!</strong>
-  <br/><br/>
-  Made with ❤️ for the Islamic community
-  <br/>
-  Raneem Sadeh
+<br/>
+<img src="docs/assets/app-walkthrough.gif" width="80%" alt="Walkthrough of the application" />
+<br/><br/>
+
+**MIT licensed** · Built by [Raneem Sadeh](https://github.com/RaneemSadeh)
+
 </div>

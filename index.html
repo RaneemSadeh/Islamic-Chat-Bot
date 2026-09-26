@@ -1,30 +1,74 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>الشات بوت الإسلامي</title>
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="سراج - مساعد معرفي إسلامي يجيب بالعربية ويوضّح النص الأصلي والمصدر لكل إجابة."
+    />
+    <title>سراج · مساعد معرفي إسلامي</title>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23046C4E'/%3E%3Cpath d='M12 4c1.9 2.2 2.9 3.9 2.9 5.3a2.9 2.9 0 1 1-5.8 0C9.1 7.9 10.1 6.2 12 4z' fill='%23fff'/%3E%3Cpath d='M5 14h6a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 14 14h5v5h-5a1.5 1.5 0 0 0-1.5 1.5A1.5 1.5 0 0 0 11 19H5z' fill='%23fff'/%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+    />
+
+    <!-- Tailwind via CDN keeps this app a zero-build demo. Install the package
+         before shipping it anywhere real: the CDN build is not for production. -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'media',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Tajawal', 'system-ui', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+            },
+          },
+        },
+      };
+    </script>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
       body {
-        font-family: 'Tajawal', sans-serif;
+        font-family: 'Tajawal', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
-</head>
-  <body>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-950">
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

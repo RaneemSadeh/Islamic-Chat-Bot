@@ -1,5 +1,5 @@
 {
-  "name": "Islamic RAG Chatbot",
-  "description": "A sophisticated chatbot designed to answer questions on Islamic topics. It uses a simulated Retrieval Augmented Generation (RAG) system to provide accurate, source-based answers from a virtual knowledge base including IslamWeb and other key texts.",
+  "name": "Siraj — Islamic RAG Chatbot",
+  "description": "An Arabic Islamic knowledge assistant. Every reply is returned as a four-field contract — explanation, original passage, source reference, and a note on how it was produced — so a claim can always be traced back to the text behind it. Ships alongside a Streamlit retrieval console that answers over PDFs you supply.",
   "requestFramePermissions": []
 }

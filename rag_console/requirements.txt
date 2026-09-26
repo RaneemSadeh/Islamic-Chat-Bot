@@ -1,0 +1,9 @@
+# Siraj RAG console - pinned to minor versions so a fresh clone resolves.
+streamlit>=1.38,<2
+langchain>=0.3,<0.4
+langchain-core>=0.3,<0.4
+langchain-community>=0.3,<0.4
+langchain-groq>=0.2,<0.3
+langchain-nomic>=0.1.4,<0.2
+faiss-cpu>=1.8,<2
+pypdf>=4.3,<6
